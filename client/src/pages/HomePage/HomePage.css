@@ -1,0 +1,9 @@
+.homePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeBBBLogo {
+    max-width: 10%;
+}
