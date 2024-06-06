@@ -14,6 +14,7 @@ function ItemPage() {
     age: "",
   });
   const { id } = useParams();
+  console.log("IDIDIDIDIDIDIIDIDID", id);
 
   const fetchProduct = async () => {
     try {
@@ -21,7 +22,7 @@ function ItemPage() {
         `${process.env.REACT_APP_SERVER_URL}/product/${id}`
       );
       setProduct(res.data);
-      console.log(product);
+      console.log("asdasdadsa", product);
     } catch (error) {
       console.error("Error fetching the product!", error);
     }
@@ -33,7 +34,7 @@ function ItemPage() {
   return (
     <>
       <h2>{product.name}</h2>
-      <img src={product.img} alt="productImage" />
+      <img src={product.image} alt="productImage" />
       <p>Description: {product.description}</p>
       <p>Price: {product.price}</p>
       <p>Collection: {product.collection}</p>

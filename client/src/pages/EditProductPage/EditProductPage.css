@@ -1,0 +1,25 @@
+.editButton {
+    width: 100px; 
+    height: 100px;
+    background: grey;
+    clip-path: polygon(
+      50% 0%, 
+      100% 25%, 
+      100% 75%, 
+      50% 100%, 
+      0% 75%, 
+      0% 25%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .editButton:hover {
+    background: darkgrey;
+  }

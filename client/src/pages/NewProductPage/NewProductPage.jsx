@@ -63,7 +63,7 @@ function NewProductPage() {
         <label>
           Price:
           <input
-            type="number"
+            type="text"
             name="price"
             value={newProduct.price}
             onChange={handleChange}

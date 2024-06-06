@@ -1,0 +1,32 @@
+
+.collectionsPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.collectionImgLink {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    height: auto;
+    justify-content: center;
+    align-items: center; 
+ 
+}
+
+.collectionImgLink img {
+    max-width: 30%;
+    clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    -webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    
+    
+  }
+
+.collectionName {
+    text-decoration: none;
+    color: goldenrod;
+    
+}

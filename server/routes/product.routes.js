@@ -36,7 +36,19 @@ router.put("/editProduct/:id", async (req, res, next) => {
   }
 });
 
+router.get("/collections/:collection", async (req, res, next) => {
+  console.log("Collection parameter:", req.params.collection);
+  try {
+    const products = await Product.find({ collection: req.params.collection });
+    res.json(products);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error fetching products");
+  }
+});
+
 router.get("/:id", async (req, res, next) => {
+  console.log("sdadsdsddSIAUSBISUFBGAISUFBASIUF", req.params.id);
   try {
     const product = await Product.findById(req.params.id);
     res.json(product);

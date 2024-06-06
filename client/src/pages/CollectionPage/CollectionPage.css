@@ -1,0 +1,38 @@
+.collectionPageTitle::first-letter {
+    text-transform: uppercase;
+  }
+
+ .collectionPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: navy;
+ } 
+
+ .collectionMap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .collectionMap img {
+    width: 70%;
+    height: 70%;
+   
+    
+    
+ }
+
+ .collectionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: navy;
+    max-width: 50%;
+    
+ }

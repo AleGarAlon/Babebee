@@ -19,7 +19,7 @@ const productSchema = new Schema(
       required: [true, "Name is required."],
     },
     price: {
-      type: Number,
+      type: String,
       required: [true, "Name is required."],
     },
     size: {
