@@ -1,0 +1,10 @@
+.topBarPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+}
+
+.topBarBBBLogo {
+    max-width: 50%;
+}

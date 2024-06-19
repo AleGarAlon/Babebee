@@ -1,14 +1,25 @@
-.productPageProduct {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 15%;
+.productsPageTitle::first-letter {
+    text-transform: uppercase;
+}
+.productsPageTitle {
+    margin-bottom: 8%;
+    font-size: 400%;
 }
 
 .productsPage {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: navy;
+}
+
+.productItem img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    
+}
+.productItem:hover {
+    background-color: tomato;
 }

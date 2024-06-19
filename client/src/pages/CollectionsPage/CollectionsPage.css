@@ -7,6 +7,11 @@
     
 }
 
+
+
+
+
+
 .collectionImgLink {
     display: flex;
     flex-direction: column;
@@ -18,7 +23,9 @@
 }
 
 .collectionImgLink img {
-    max-width: 30%;
+    max-width: 20%;
+    max-height: 20%;
+    object-fit: cover;
     clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     -webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     
@@ -28,5 +35,5 @@
 .collectionName {
     text-decoration: none;
     color: goldenrod;
-    
+    text-decoration: none;
 }

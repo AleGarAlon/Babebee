@@ -5,8 +5,8 @@ import Loading from "../../components/Loading/Loading";
 import "./CollectionPage.css";
 
 function CollectionPage() {
-  const { collection } = useParams();
-  const [products, setProducts] = useState([""]);
+  let { collection } = useParams();
+  const [products, setProducts] = useState([]);
 
   const fetchCollection = async () => {
     try {
@@ -22,26 +22,39 @@ function CollectionPage() {
 
   useEffect(() => {
     fetchCollection();
-  }, []);
+  }, [collection]);
+
+  const createRows = () => {
+    const rows = [];
+    for (let i = 0; i < products.length; i += 4) {
+      rows.push(products.slice(i, i + 4));
+    }
+    return rows;
+  };
+
+  const rows = createRows();
 
   return (
     <div className="collectionPage">
       <h1 className="collectionPageTitle">{collection}</h1>
 
-      {products ? (
-        <div className="collectionMap">
-          {products.map((product) => (
-            <Link
-              to={`/item/${product._id}`}
-              key={product._id}
-              className="collectionItem"
-            >
-              <h2>{product.name}</h2>
-              <img src={product.image} alt="productImage" />
-              <p>Price: {product.price}</p>
-            </Link>
-          ))}
-        </div>
+      {products.length > 0 ? (
+        rows.map((row, rowIndex) => (
+          <div
+            className={`collectionRow ${rowIndex % 2 === 1 ? "offset" : ""}`}
+            key={rowIndex}
+          >
+            {row.map((product) => (
+              <Link
+                to={`/item/${product._id}`}
+                key={product._id}
+                className="collectionItem"
+              >
+                <img src={product.image} alt="productImage" />
+              </Link>
+            ))}
+          </div>
+        ))
       ) : (
         <Loading />
       )}

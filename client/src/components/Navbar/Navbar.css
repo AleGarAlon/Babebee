@@ -1,0 +1,35 @@
+.navBar {
+    position: sticky;
+    width: 100%;
+    background-color: #83c9c6; 
+    color: #555;
+    display: flex;
+    justify-content: center; 
+    
+    z-index: 1000;
+  }
+  
+  .navLinks {
+    display: flex;
+    
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+  }
+  
+  .navLinks button {
+    background-color: #83c9c6;
+    color: #555;
+    border: none;
+    
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .navLinks button:hover {
+    background-color: #f9ba5d;
+  }
+  

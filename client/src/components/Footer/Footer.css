@@ -1,0 +1,24 @@
+.footer {
+    background-color: #84c8b6;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer p {
+    
+  }
+  
+  .socialMediaContainer {
+    padding: 2% 0%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .socialMediaContainer a img {
+    max-width: 25%; /* Asegurar el tamaño del icono */
+  }
+  

@@ -1,6 +1,43 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the User model to whatever makes sense in this case
+// Sub-schema for size
+const sizeSchema = new Schema(
+  {
+    length: Number,
+    height: Number,
+    width: Number,
+    weight: Number,
+  },
+  { _id: false }
+);
+
+// Sub-schema for bundle
+const bundleSchema = new Schema(
+  {
+    bundle1: { type: Schema.Types.ObjectId, ref: "Product", default: null },
+    bundle2: { type: Schema.Types.ObjectId, ref: "Product", default: null },
+    bundle3: { type: Schema.Types.ObjectId, ref: "Product", default: null },
+    bundle4: { type: Schema.Types.ObjectId, ref: "Product", default: null },
+  },
+  { _id: false }
+);
+
+// Sub-schema for gallery
+const gallerySchema = new Schema(
+  {
+    image1: String,
+    image2: String,
+    image3: String,
+    image4: String,
+    image5: String,
+    image6: String,
+    image7: String,
+    image8: String,
+  },
+  { _id: false }
+);
+
+// Main product schema
 const productSchema = new Schema(
   {
     name: {
@@ -9,53 +46,65 @@ const productSchema = new Schema(
     },
     image: {
       type: String,
-      required: [true, "Name is required."],
+      required: [true, "Image is required."],
     },
-    gallery: {
-      type: [String],
-    },
+    gallery: gallerySchema,
     description: {
       type: String,
-      required: [true, "Name is required."],
+      required: [true, "Description is required."],
     },
     price: {
       type: String,
-      required: [true, "Name is required."],
+      required: [true, "Price is required."],
     },
     size: {
-      type: [String],
+      type: {
+        S: sizeSchema,
+        M: sizeSchema,
+        L: sizeSchema,
+        Única: sizeSchema,
+      },
     },
     category: {
-      type: String,
-      required: [true, "Name is required."],
+      type: [String],
+      enum: [
+        "Peluches",
+        "Muñecos y Dudús",
+        "Hora de Jugar",
+        "Estimulación Sensorial",
+        "Juguetes Educativos",
+        "Accesorios",
+        "Decoración y Orden",
+      ],
+      required: [true, "Category is required."],
     },
     collection: {
       type: String,
+      enum: ["Bajo el agua", "El Bosque", "Mundo Diminuto"],
     },
     reference: {
       type: String,
-      required: [true, "Name is required."],
+      required: [true, "Reference is required."],
     },
     age: {
-      type: String,
-      required: [true, "Name is required."],
+      type: [String],
+      enum: ["baby", "toddler", "kid"],
     },
     custom: {
-      type: String,
+      type: Boolean,
+      default: false,
     },
-    bundle: {
-      type: String,
-    },
+    bundle: bundleSchema,
     externalLink: {
-      type: String,
-    },
-    reviews: {
       type: String,
     },
     stock: {
       type: Number,
     },
     info: {
+      type: [String],
+    },
+    variable: {
       type: [String],
     },
   },

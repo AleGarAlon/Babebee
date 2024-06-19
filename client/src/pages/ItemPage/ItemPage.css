@@ -1,0 +1,58 @@
+.itemImg {
+    max-width: 70%;
+}
+
+.itemGallery {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    max-width: 10%;
+    max-height: 10%;
+}
+
+.galleryImage {
+    max-width: 80%;
+}
+
+.leftColumn {
+    max-width: 60%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rightColumn {
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.itemColumns { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bundleGallery {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    max-width: 10%;
+    max-height: 10%;
+}
+
+.bundleImage {
+    max-width: 80%;
+}

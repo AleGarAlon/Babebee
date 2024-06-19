@@ -17,12 +17,18 @@ import ItemPage from "./pages/ItemPage/ItemPage";
 import FAQPage from "./pages/FAQPage/FAQPage";
 import NewProductPage from "./pages/NewProductPage/NewProductPage";
 import EditProductPage from "./pages/EditProductPage/EditProductPage";
+import TopBar from "./components/TopBar/TopBar";
+import Footer from "./components/Footer/Footer";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
+import NewArticlePage from "./pages/NewArticlePage/NewArticlePage";
 // import IsPrivate from "./components/IsPrivate/IsPrivate";
 // import IsAnon from "./components/IsAnon/IsAnon";
 
 function App() {
   return (
     <div className="App">
+      <TopBar />
+
       <Navbar />
 
       <Routes>
@@ -37,8 +43,10 @@ function App() {
         <Route path="/item/:id" element={<ItemPage />} />
         <Route path="/newProduct" element={<NewProductPage />} />
         <Route path="/editProduct/:id" element={<EditProductPage />} />
+        <Route path="/newArticle" element={<NewArticlePage />} />
+      </Routes>
 
-        {/* <Route
+      {/* <Route
           path="/profile"
           element={
             <IsPrivate>
@@ -63,7 +71,6 @@ function App() {
             </IsAnon>
           }
         /> */}
-      </Routes>
     </div>
   );
 }

@@ -8,11 +8,16 @@ function ProductsPage() {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const res = await axios(`${process.env.REACT_APP_SERVER_URL}/product/all`);
-    const data = res.data.allProducts;
-    console.log(res.data);
-    setProducts(data);
-    console.log(products);
+    try {
+      const res = await axios(
+        `${process.env.REACT_APP_SERVER_URL}/product/all`
+      );
+      const data = res.data.allProducts;
+      setProducts(data);
+      console.log("Your products are", products);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
@@ -21,15 +26,15 @@ function ProductsPage() {
 
   return (
     <div className="productsPage">
-      <div>ProductsPage</div>
-      {products ? (
+      <h1 className="productsPageTitle">Products</h1>
+      {products.length > 0 ? (
         products.map((product) => (
-          <Link to={`/item/${product._id}`} key={product._id}>
-            <div className="productPageProduct">
-              <h2>{product.name}</h2>
-              <img src={product.image} alt="productImage" />
-              <p>Price: {product.price}</p>
-            </div>
+          <Link
+            to={`/item/${product._id}`}
+            key={product._id}
+            className="productItem"
+          >
+            <img src={product.image} alt={product.name} />
           </Link>
         ))
       ) : (

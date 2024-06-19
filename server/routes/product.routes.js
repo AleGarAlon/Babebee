@@ -48,12 +48,14 @@ router.get("/collections/:collection", async (req, res, next) => {
 });
 
 router.get("/:id", async (req, res, next) => {
-  console.log("sdadsdsddSIAUSBISUFBGAISUFBASIUF", req.params.id);
   try {
-    const product = await Product.findById(req.params.id);
+    const product = await Product.findById(req.params.id)
+      .populate("bundle.bundle1 bundle.bundle2 bundle.bundle3 bundle.bundle4")
+      .exec();
     res.json(product);
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    res.status(500).json({ error: "Error fetching the product" });
   }
 });
 module.exports = router;
