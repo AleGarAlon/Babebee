@@ -1,0 +1,9 @@
+.announcementComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcementImage {
+    width: 10rem;
+}

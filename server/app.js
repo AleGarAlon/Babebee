@@ -26,6 +26,9 @@ app.use("/product", productRoutes);
 
 const articleRoutes = require("./routes/article.routes");
 app.use("/article", articleRoutes);
+
+const announcementRoutes = require("./routes/announcement.routes");
+app.use("/announcement", announcementRoutes);
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

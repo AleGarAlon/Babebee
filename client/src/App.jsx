@@ -21,8 +21,13 @@ import TopBar from "./components/TopBar/TopBar";
 import Footer from "./components/Footer/Footer";
 import SocialMedia from "./components/SocialMedia/SocialMedia";
 import NewArticlePage from "./pages/NewArticlePage/NewArticlePage";
-// import IsPrivate from "./components/IsPrivate/IsPrivate";
-// import IsAnon from "./components/IsAnon/IsAnon";
+import EditArticlePage from "./pages/EditArticlePage/EditArticlePage";
+import AllArticlesPage from "./pages/AllArticlesPage/AllArticlesPage";
+import IsPrivate from "./components/IsPrivate/IsPrivate";
+import IsAnon from "./components/IsAnon/IsAnon";
+import EditAnnouncementPage from "./pages/EditAnnouncementPage/EditAnnouncementPage";
+import AllAnnouncementPage from "./pages/AllAnnouncementPage/AllAnnouncementPage";
+import NewAnnouncementPage from "./pages/NewAnnouncementPage/NewAnnouncementPage";
 
 function App() {
   return (
@@ -44,6 +49,14 @@ function App() {
         <Route path="/newProduct" element={<NewProductPage />} />
         <Route path="/editProduct/:id" element={<EditProductPage />} />
         <Route path="/newArticle" element={<NewArticlePage />} />
+        <Route path="/editArticle/:id" element={<EditArticlePage />} />
+        <Route path="/articles" element={<AllArticlesPage />} />
+        <Route path="/newAnnouncement" element={<NewAnnouncementPage />} />
+        <Route
+          path="/editAnnouncement/:id"
+          element={<EditAnnouncementPage />}
+        />
+        <Route path="/announcements" element={<AllAnnouncementPage />} />
       </Routes>
 
       {/* <Route
