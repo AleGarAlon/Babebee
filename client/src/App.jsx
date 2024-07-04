@@ -43,7 +43,7 @@ function App() {
         <Route path="/collections" element={<CollectionsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/FAQ" element={<FAQPage />} />
-        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/:category" element={<ProductsPage />} />
         <Route path="/collections/:collection" element={<CollectionPage />} />
         <Route path="/item/:id" element={<ItemPage />} />
         <Route path="/newProduct" element={<NewProductPage />} />

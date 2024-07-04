@@ -41,7 +41,7 @@ router.get("/:id", async (req, res, next) => {
 router.put("/:id", async (req, res, next) => {
   const id = req.params.id;
   try {
-    const announcement = await Article.findByIdAndUpdate(id, req.body, {
+    const announcement = await Announcement.findByIdAndUpdate(id, req.body, {
       new: true,
     });
     res.status(200).json(announcement);

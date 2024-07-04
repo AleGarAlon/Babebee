@@ -4,14 +4,18 @@ import "./SocialMedia.css";
 function SocialMedia() {
   return (
     <div className="socialMediaContainer">
-      <a href="https://www.etsy.com" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.etsy.com/shop/BabebeeKidstore?ref=seller-platform-mcnav"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           src="https://res.cloudinary.com/dvml0gelc/image/upload/v1718659049/Babebee/Brand/etsy_bvwpuv.png"
           alt="iconoEtsy"
         />
       </a>
       <a
-        href="https://www.instagram.com"
+        href="https://www.instagram.com/babebee.kidstore/?hl=es"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -21,7 +25,7 @@ function SocialMedia() {
         />
       </a>
       <a
-        href="https://www.pinterest.com"
+        href="https://www.pinterest.es/BabebeeKidstore/"
         target="_blank"
         rel="noopener noreferrer"
       >

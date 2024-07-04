@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
-import Loading from "../../components/Loading/Loading";
+
 import "./Announcement.css";
 
 function Announcement() {
@@ -23,7 +23,7 @@ function Announcement() {
     <>
       {announcements.length > 0 ? (
         announcements.reverse().map((announcement) => (
-          <div className="announcementComponet">
+          <div className="announcementComponet" key={announcement._id}>
             <h2 className="announcementTitle">{announcement.title}</h2>
             <img
               className="announcementImage"
@@ -34,7 +34,7 @@ function Announcement() {
           </div>
         ))
       ) : (
-        <Loading />
+        <div></div>
       )}
     </>
   );

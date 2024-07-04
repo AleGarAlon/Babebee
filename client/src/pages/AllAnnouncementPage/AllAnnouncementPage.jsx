@@ -29,7 +29,7 @@ function AllAnnouncementPage() {
 
   return (
     <div>
-      <h1>Noticias</h1>
+      <h1>TODAS LOS ANUNCIOS</h1>
 
       {announcements ? (
         announcements.reverse().map((announcement) => (

@@ -1,3 +1,33 @@
+
+
+@font-face {
+  font-family: 'Amsterdam';
+  src: url('../public/fonts/Amsterdam.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gagalin';
+  src: url('../public/fonts/Gagalin-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../public/fonts/GlacialIndifference-Regular.otf') format('truetype');
+}
+
+
 .App {
   text-align: center;
+  width: 100%;
+}
+
+.App h1 {
+  font-family: 'Amsterdam', sans-serif;
+}
+
+.App h2, .App h3, .App h4 {
+  font-family: 'Gagalin', sans-serif;
+}
+
+.App p {
+  font-family: 'Glacial Indifference', sans-serif;
 }

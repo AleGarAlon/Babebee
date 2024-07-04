@@ -47,6 +47,17 @@ router.get("/collections/:collection", async (req, res, next) => {
   }
 });
 
+router.get("/products/:category", async (req, res, next) => {
+  const category = req.params.category;
+  try {
+    const products = await Product.find({ category: { $in: [category] } });
+    res.status(200).json({ products });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Error fetching products by category" });
+  }
+});
+
 router.get("/:id", async (req, res, next) => {
   try {
     const product = await Product.findById(req.params.id)

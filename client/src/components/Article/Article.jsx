@@ -23,13 +23,13 @@ function Article() {
     <>
       {articles.length > 0 ? (
         articles.reverse().map((article) => (
-          <div className="articleComponet">
+          <div key={article._id} className="articleComponet">
             <h3 className="articleTitle">{article.title}</h3>
             <p className="articleBody">{article.body}</p>
           </div>
         ))
       ) : (
-        <Loading />
+        <div></div>
       )}
     </>
   );

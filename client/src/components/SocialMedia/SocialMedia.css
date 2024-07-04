@@ -1,11 +1,11 @@
 .socialMediaContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .socialMediaContainer a img{
-    max-width: 30%;
-    max-height: 30%;
+    width: 30px;
+    margin: 0 5px;
 
 }

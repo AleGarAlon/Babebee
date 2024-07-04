@@ -1,35 +1,68 @@
 .navBar {
-    position: sticky;
-    width: 100%;
-    background-color: #83c9c6; 
-    color: #555;
-    display: flex;
-    justify-content: center; 
-    
-    z-index: 1000;
-  }
+  width: 100vw;
   
-  .navLinks {
-    display: flex;
-    
-  }
+  background-color: #83c9c6; 
+  color: #555;
+  display: flex;
+  justify-content: center; 
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  text-decoration: none;
+}
+
+.navLinks button {
+  background-color: #83c9c6;
+  color: #555;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navLinks button:hover {
+  background-color: #f9ba5d;
+  border-radius: 3px;
   
-  .navLinks a {
-    text-decoration: none;
-  }
-  
-  .navLinks button {
-    background-color: #83c9c6;
-    color: #555;
-    border: none;
-    
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .navLinks button:hover {
-    background-color: #f9ba5d;
-  }
-  
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9ba5d;
+  border: 3px solid #83c9c6;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #555;
+  text-decoration: none;
+}
+
+.dropdownMenu a button {
+  background-color: #f9ba5d;
+  color: #555;
+  border: none;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.dropdownMenu a button:hover {
+  background-color: #f9ba5d;
+}
